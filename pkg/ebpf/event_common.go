@@ -72,6 +72,9 @@ type Connections struct {
 // ConnectionStats stores statistics for a single connection.  Field order in the struct should be 8-byte aligned
 //easyjson:json
 type ConnectionStats struct {
+	// id is used only in ebpf/ to identify connections
+	id uint32
+
 	// Source & Dest represented as a string to handle both IPv4 & IPv6
 	// Note: As ebpf.Address is an interface, we need to use interface{} for easyjson
 	Source interface{} `json:"src,string"`
