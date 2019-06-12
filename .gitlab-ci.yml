@@ -93,6 +93,7 @@ before_script:
   only:
     - master
     - tags
+    - kserrania/kitchen-all-vms-in-same-region
     - triggers
     - web
 
